@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import Button from './components/Button';
 
-function App() {
+const MainWrapper = styled.section`
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+`;
+const Title = styled.h1`
+  color: red;
+  font-size: 2rem;
+`;
+
+// const Section = styled.section`
+//   padding: 2rem;
+//   margin: 2rem;
+// `;
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MainWrapper>
+      <Title>Styled Component</Title>
+      <Button primary bgColor="violet">
+        Primary Button
+      </Button>
+      <Button>Normal Button</Button>
+    </MainWrapper>
   );
-}
+};
 
 export default App;
